@@ -1,0 +1,15 @@
+version: "3"
+services:
+  wdio:
+    build: .
+    image: wdio
+    depends_on:
+      chrome:
+        condition: service_healthy
+  chrome:
+    image: selenium/standalone-chrome
+    shm_size: 2g
+    healthcheck:
+      test: ["CMD", "/opt/bin/check-grid.sh", "--host", "0.0.0.0", "--port", "4444"]
+    ports:
+      - 4444:4444
