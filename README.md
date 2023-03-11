@@ -12,9 +12,9 @@ Running [WebdriverIO](https://webdriver.io/) tests in a docker container allows 
 
 To run the tests:
 
-0. `npm install`
-1. Ensure Docker is up and running
-2. Run `npm run test:docker`
+1. `npm install`
+2. Ensure Docker is up and running
+3. Run `npm run test:docker`
 
 
 
